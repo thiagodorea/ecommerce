@@ -4,3 +4,9 @@ header {
     justify-content: space-between;
     padding: 10px 0;
 }
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 3em;
+}

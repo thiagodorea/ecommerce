@@ -63,3 +63,11 @@ input{
 .imgLogo:hover{
     translate: 5px 5px;
 }
+
+.error__{
+    color: rgb(250, 119, 119);
+    background-color: rgb(150, 0, 0);
+    text-align: center;
+    border-radius: 20px;
+    padding: 5px 0;
+}

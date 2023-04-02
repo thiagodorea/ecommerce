@@ -5,8 +5,3 @@ footer{
     padding: 10px 0;
 }
 
-ul{
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
