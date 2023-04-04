@@ -30,8 +30,7 @@
     color: #7B7B7B;
     justify-content: right;
     display: flex;
-    
-    font-size: 22px;
+    font-size: 1.3em;
 }
 
 .card-icon:hover{
