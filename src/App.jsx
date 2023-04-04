@@ -4,6 +4,7 @@ import Login from "./pages/login";
 import Home from "../src/pages/home"
 
 import './styles.css'
+import Info from "./pages/info";
 
 function App() {
 
@@ -11,8 +12,9 @@ function App() {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" exact element={<Login />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/info" element={<Info />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

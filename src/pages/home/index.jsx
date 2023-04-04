@@ -3,11 +3,13 @@ import "./styles.css";
 import Card from "../../components/card/card";
 import BaseTemplate from "../../templates/base-template";
 import api from "../../service/api";
+import Loading from "../../components/loading";
 import { useEffect, useState } from "react";
 
 const Home = () => {
 
     const [times, setTimes] = useState([]);
+    const [done, setDone] = useState(false);
 
     const getTimes = async () => {
         try {
@@ -16,6 +18,7 @@ const Home = () => {
                     Authorization: localStorage.getItem("@times_token"),
                 },
             })
+            setDone(true);
             setTimes(response.data);
         } catch (error) {
             alert(error);
@@ -31,8 +34,8 @@ const Home = () => {
         <BaseTemplate>
             <div className="list-container">
                 <div className="list-items">
-                    {
-                        times.map((time) =>(
+                    {!done ? <Loading />
+                        : times.map((time) =>(
                             <div key={time._id}>
                                 <Card dados={time} />
                             </div>

@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/auth-context";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import api from "../../service/api";
 import "./styles.css";
 
@@ -9,6 +11,7 @@ const Login = () =>{
     const [ email, setEmail ] = useState("");
     const [ senha, setSenha ] = useState("");
     const [ msgErro, setMsgErro ] = useState("");
+    const [done, setDone] = useState(false);
     
     const navigate = useNavigate();
     const context = useContext(AuthContext);
@@ -16,6 +19,7 @@ const Login = () =>{
     const acessar = async (event) =>{
         event.preventDefault();
         try {
+            setDone(true);
             const {data} = await api.post("/auth",{ 
                 email: email,
                 password: senha,
@@ -24,7 +28,8 @@ const Login = () =>{
             setMsgErro("");
             navigate('/home')
         } catch (error) {
-            setMsgErro(error.response.data.message)
+            setMsgErro(error.response.data.message);
+            setDone(false);
         }
     }
 
@@ -44,7 +49,7 @@ const Login = () =>{
                         <span></span>
                     </div>
                     {msgErro.length > 0 && <p className="error__" >{ msgErro }</p>}
-                    <button className="btn_login" onClick={()=>acessar(event)} >ENTRAR</button>
+                    <button className="btn_login" onClick={()=>acessar(event)} > {!done ? 'ENTRAR' : <FontAwesomeIcon icon={faSpinner} spinPulse /> }  </button>
                 </form>
             </div>
         </div>
