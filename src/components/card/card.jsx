@@ -5,17 +5,17 @@ import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom';
 
 const Card = (props) => {
-    const { name, image } = props.dados;
+    const { name, image, _id } = props.dados;
 
     const navigate = useNavigate();
 
-    const info = () => {
-        navigate('/info')
+    const info = (id) => {
+        navigate(`/info/${id}`)
     }
     
     return(
         <div className="card-container">
-            <div className="card-container-icon" onClick={info} >
+            <div className="card-container-icon" onClick={() => info(_id)} >
                 <FontAwesomeIcon icon={faCircleExclamation} className="card-icon" />
             </div>
             <img src={image} alt={name} className="card-image" />

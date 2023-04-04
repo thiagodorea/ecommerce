@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Login />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/info" element={<Info />} />
+          <Route path="/info/:idTime" element={<Info />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
