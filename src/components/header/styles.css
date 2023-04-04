@@ -10,3 +10,12 @@ ul{
     list-style: none;
     gap: 3em;
 }
+
+.btn_sair{
+    border: none;
+    background-color: #2D2D2D;
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+}

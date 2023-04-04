@@ -27,7 +27,7 @@
     }
 }
 
-button{
+.btn_login{
     width: 100%;
     margin: 20px 0 ;
     padding: 8px;
@@ -41,7 +41,7 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+.btn_login:hover{
     background-color: #454545;
     border: 2px solid #4B4B4B;
 }

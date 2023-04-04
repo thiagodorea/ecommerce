@@ -6,11 +6,12 @@ import "./styles.css";
 
 const Login = () =>{
 
-    const navigate = useNavigate();
     const [ email, setEmail ] = useState("");
     const [ senha, setSenha ] = useState("");
     const [ msgErro, setMsgErro ] = useState("");
-    const  context  =  useContext(AuthContext);
+    
+    const navigate = useNavigate();
+    const context = useContext(AuthContext);
 
     const acessar = async (event) =>{
         event.preventDefault();
@@ -19,12 +20,10 @@ const Login = () =>{
                 email: email,
                 password: senha,
             })
-            context.setUserName(data.name);
+            context.saveData(data.name,data.token);
             setMsgErro("");
             navigate('/home')
-            console.log(data);
         } catch (error) {
-            console.log(error);
             setMsgErro(error.response.data.message)
         }
     }
@@ -45,7 +44,7 @@ const Login = () =>{
                         <span></span>
                     </div>
                     {msgErro.length > 0 && <p className="error__" >{ msgErro }</p>}
-                    <button onClick={()=>acessar(event)} >ENTRAR</button>
+                    <button className="btn_login" onClick={()=>acessar(event)} >ENTRAR</button>
                 </form>
             </div>
         </div>
