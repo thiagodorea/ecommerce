@@ -10,8 +10,10 @@ const Header = () => {
     const navigate = useNavigate();
 
     const logout = () =>{
-        data.removeData()
-        navigate('/')
+        if(confirm('Deseja realmente sair do sistema?')){
+            data.removeData()
+            navigate('/')
+        }
     }
 
     return(

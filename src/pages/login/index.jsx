@@ -45,7 +45,7 @@ const Login = () =>{
                     </div>
                     <div>
                         <label>senha</label>
-                        <input type="senha" value ={senha} onChange={(event)=> setSenha(event.target.value)} />
+                        <input type="password" value ={senha} onChange={(event)=> setSenha(event.target.value)} />
                         <span></span>
                     </div>
                     {msgErro.length > 0 && <p className="error__" >{ msgErro }</p>}

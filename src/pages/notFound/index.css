@@ -1,0 +1,13 @@
+.notFound-container{
+    margin: 0 auto;
+    text-align: center;
+    max-width: 500px;
+}
+
+.notFound-container>p{
+    font-size: 1.5em;
+}
+
+.notFound-img{
+    width: 100%;
+}
