@@ -32,10 +32,10 @@ const Home = () => {
 
     return (
         <BaseTemplate>
+            {!done ? <Loading /> :
             <div className="list-container">
                 <div className="list-items">
-                    {!done ? <Loading />
-                        : times.map((time) =>(
+                    { times.map((time) =>(
                             <div key={time._id}>
                                 <Card dados={time} />
                             </div>
@@ -43,6 +43,7 @@ const Home = () => {
                     }
                 </div>
             </div>
+            }
         </BaseTemplate>
     );
 };

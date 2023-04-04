@@ -1,0 +1,40 @@
+.containerInfo{
+    display: flex;
+    min-height: 70vh;
+}
+
+
+.cardLogoTime{
+    display: flex;
+    background-color: #454545;
+    border-radius: 12px;
+    padding: 30px;
+    justify-content: center;
+    height: 420px;
+}
+.imgLogoTime{
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.logoTime{
+    margin: auto 0;
+    max-width: 80%;
+}
+
+.infoTime{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.infoTime>p{
+    text-align: justify;
+    font-weight: 300;
+}
+
+.infoTime>h2{
+    padding-bottom: 20px;
+    font-weight: 400;
+}
