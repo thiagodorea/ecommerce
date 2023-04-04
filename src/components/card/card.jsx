@@ -12,14 +12,21 @@ const Card = (props) => {
     const info = (id) => {
         navigate(`/info/${id}`)
     }
+
+    const produto = (id) => {
+        localStorage.setItem("@times_name",name )
+        navigate(`/produtos/${id}`)
+    }
     
     return(
-        <div className="card-container">
-            <div className="card-container-icon" onClick={() => info(_id)} >
-                <FontAwesomeIcon icon={faCircleExclamation} className="card-icon" />
+        <div className="card-container"  >
+            <div className="card-container-icon" >
+                <FontAwesomeIcon icon={faCircleExclamation} className="card-icon"  onClick={() => info(_id)} />
             </div>
-            <img src={image} alt={name} className="card-image" />
-            <h3 className="card-title">{name}</h3>
+            <div className='card-container-image' onClick={() => produto(_id)}>
+                <img src={image} alt={name} className="card-image" />
+                <h3 className="card-title">{name}</h3>
+            </div>
         </div>
     )
 }

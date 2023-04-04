@@ -5,6 +5,7 @@ import Home from "../src/pages/home"
 
 import './styles.css'
 import Info from "./pages/info";
+import Produto from "./pages/produto";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" exact element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/info/:idTime" element={<Info />} />
+          <Route path="/produtos/:idTime" element={<Produto />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

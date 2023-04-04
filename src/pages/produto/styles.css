@@ -1,0 +1,88 @@
+.nenhum-produto{
+    font-size: 2em;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.title-time{
+    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 52px;
+}
+
+.list-produto-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.list-produto-items {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 195px);
+    grid-gap: 20px 8px;
+    justify-content: space-between;
+}
+
+.produto-container {
+    background: #454545;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    transition: .2s;
+}
+
+.produto-container:hover{
+    transform: scale(1.05, 1.05);
+    transition: .2s;
+}
+
+.produto-container-icon{
+    color: #7B7B7B;
+    justify-content: right;
+    display: flex;
+    font-size: 1.3em;
+}
+
+.produto-container-image{
+    padding: 18px;
+    min-height:202px ;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.produto-image {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.produto-title {
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 15px;
+    text-align: center;
+    margin-top: 13px;
+}
+
+
+.produto-preco-desconto{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    margin-top: 13px;
+    text-decoration: line-through
+}
+
+.produto-preco{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 52px;
+    text-align: center;
+    margin-top: 13px;
+}
