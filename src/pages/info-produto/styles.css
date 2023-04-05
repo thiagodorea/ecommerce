@@ -1,0 +1,65 @@
+.containerInfo{
+    display: flex;
+    min-height: 70vh;
+}
+
+
+.cardLogoTime{
+    display: flex;
+    background-color: #454545;
+    border-radius: 12px;
+    padding: 30px;
+    justify-content: center;
+    height: 420px;
+}
+.imgLogoTime{
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.logoTime{
+    margin: auto 0;
+    max-width: 80%;
+}
+
+.info-produto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info-produto>p{
+    text-align: justify;
+    font-weight: 300;
+}
+
+.info-produto>h2{
+    /* padding-bottom: 20px; */
+    font-weight: 400;
+}
+
+.info-produto-descricao{
+    padding: 20px 0;
+}
+
+
+.info-produto-preco-desconto{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    margin-top: 13px;
+    margin-bottom: -13px;
+    text-decoration: line-through
+}
+
+.info-produto-preco{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 52px;
+    text-align: center;
+    margin-bottom: 25px;
+}

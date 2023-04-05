@@ -3,12 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 
-const Back = () =>{
-
-    
-
+const Back = (props) =>{
     return(
-        <Link to="/home" className="icon_back">
+        <Link to={props.link} className="icon_back">
             <FontAwesomeIcon icon={faCircleArrowLeft} />
         </Link>
     )

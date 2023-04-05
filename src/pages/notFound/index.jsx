@@ -5,7 +5,7 @@ import './index.css'
 const NotFound = () => {
     return(
         <BaseTemplate>
-            <Back />
+            <Back  link={'/home'}    />
             <div className='notFound-container'>
                 <img src="../../../public/notfound.png" alt="Página não encontrada"  className='notFound-img'/>
                 <p>Oooops...  Essa página não existe. =( </p>

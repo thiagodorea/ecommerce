@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import Back from "../../components/back";
 import api from "../../service/api";
 import BaseTemplate from "../../templates/base-template";
@@ -25,7 +26,7 @@ const Info = () => {
             })
             setInfoTime(response.data.response);
         } catch (error) {
-            alert(error);
+            toast.error('Erro ao buscar informação.')
         }
     }
     

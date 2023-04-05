@@ -5,6 +5,7 @@ import BaseTemplate from "../../templates/base-template";
 import api from "../../service/api";
 import Loading from "../../components/loading";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 const Home = () => {
 
@@ -21,7 +22,7 @@ const Home = () => {
             setDone(true);
             setTimes(response.data);
         } catch (error) {
-            alert(error);
+            toast.error('Erro ao buscar informação.')
         }
     }
     

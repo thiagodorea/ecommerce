@@ -3,6 +3,9 @@ import { AuthContext } from "../../contexts/auth-context";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import api from "../../service/api";
 import "./styles.css";
 
@@ -10,7 +13,6 @@ const Login = () =>{
 
     const [ email, setEmail ] = useState("");
     const [ senha, setSenha ] = useState("");
-    const [ msgErro, setMsgErro ] = useState("");
     const [done, setDone] = useState(false);
     
     const navigate = useNavigate();
@@ -25,16 +27,16 @@ const Login = () =>{
                 password: senha,
             })
             context.saveData(data.name,data.token);
-            setMsgErro("");
             navigate('/home')
         } catch (error) {
-            setMsgErro(error.response.data.message);
             setDone(false);
+            toast.error(error.response.data.message);
         }
     }
 
     return(
         <div className="containerLogin"> 
+        <ToastContainer theme="dark" />
         <img src="/buy.png" className="imgLogo" />
             <div className="box">
                 <form>
@@ -48,7 +50,6 @@ const Login = () =>{
                         <input type="password" value ={senha} onChange={(event)=> setSenha(event.target.value)} />
                         <span></span>
                     </div>
-                    {msgErro.length > 0 && <p className="error__" >{ msgErro }</p>}
                     <button className="btn_login" onClick={()=>acessar(event)} > {!done ? 'ENTRAR' : <FontAwesomeIcon icon={faSpinner} spinPulse /> }  </button>
                 </form>
             </div>
