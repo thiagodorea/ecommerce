@@ -49,7 +49,7 @@ const InfoProduto = () => {
                     <small className="info-produto-fabricante">{infoProduto.maker}</small>
                     <p className="info-produto-preco-desconto">{infoProduto.discountPrice ? `R$ ${infoProduto.discountPrice}`:null}</p>
                     <p className="info-produto-preco">{infoProduto.available ?`R$ ${infoProduto.price}`:`INDISPONÍVEL`}</p>
-                    <p className="info-produto-descricao">{infoProduto.length >0 ? Descrição: null}</p>
+                    <p className="info-produto-descricao">Descrição</p>
                     <p>{infoProduto.description}</p>
                 </div>
             </div> : <Loading />}
